@@ -1,15 +1,10 @@
-    Save Button Diagram
+    Saves Notes Single Page App
 ```mermaid
 sequenceDiagram
     participant Browser
     participant Server
 
-    Browser->>Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Activate Server
-
-    Note Right of Browser: Redirect to: https://studies.cs.helsinki.fi/exampleapp/notes
-
-    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     Activate Server
     Server-->>Browser: HTML document
     Deactivate Server
@@ -19,7 +14,7 @@ sequenceDiagram
     Server-->>Browser: the css file
     Deactivate Server
 
-    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     Activate Server
     Server-->>Browser: the JavaScript file
     Deactivate Server
